@@ -1,0 +1,326 @@
+//====================================================================================================
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    @include adaptiv-value("padding-top", 13, 20, 1);
+    @include adaptiv-value("padding-bottom", 13, 20, 1);
+    z-index: 20;
+
+    &._scroll {
+    }
+    &__wrapper {
+        position: fixed;
+        width: 100%;
+        &._active {
+        }
+    }
+    &._active-bg {
+        left: -8px;
+    }
+    // .header__container
+    &__container {
+    }
+    // .header__body
+    &__body {
+    }
+    // .header__menu
+    &__menu {
+    }
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    @include adaptiv-value("gap", 50, 10, 1);
+
+    // .menu__icon
+    &__icon {
+    }
+    // .menu__logo
+    &__logo {
+        flex: 1 1 auto;
+        margin-left: 130px;
+        position: relative;
+        z-index: 5;
+        justify-self: start;
+        img {
+            @include adaptiv-value("height", 73, 60, 1);
+        }
+        @media (max-width: $md2+px) {
+            margin-left: 0;
+        }
+    }
+    // .menu__tel
+    &__tel {
+        margin-top: 1px;
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+        color: #0a0a0a;
+        &._icons-phone::before {
+            margin-right: 10px;
+        }
+        transition: color 0.3s ease 0s;
+        @media (max-width: $md2+px) {
+            display: none;
+        }
+    }
+
+    &__tel:hover,
+    &__whatsapp:hover,
+    &__telegram:hover,
+    &__viber:hover {
+        color: $redColor;
+        transition: color 0.3s ease 0s;
+    }
+    //menu__socials
+    &__socials {
+        display: flex;
+        @media (max-width: $md3+px) {
+            z-index: 5;
+        }
+        li {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 30, 20, 1);
+            }
+            &:last-child {
+                @media (max-width: $md3+px) {
+                    @include adaptiv-value("margin-right", 200, 70, 1);
+                }
+            }
+        }
+    }
+    &__tel-soc {
+        font-size: 20px;
+        color: #0a0a0a;
+        @media (min-width: $md3+px) {
+            display: none;
+        }
+    }
+    // .menu__whatsapp
+    &__whatsapp {
+        font-size: 20px;
+        color: #0a0a0a;
+    }
+    // .menu__telegram
+    &__telegram {
+        font-size: 20px;
+        color: #0a0a0a;
+    }
+    // .menu__viber
+    &__viber {
+        font-size: 20px;
+        color: #0a0a0a;
+    }
+    // .menu__btn
+    &__btn {
+        z-index: 5;
+        @media (max-width: $md2+px) {
+            margin-right: 110px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    // .menu__body
+    &__body {
+        -webkit-overflow-scrolling: touch;
+        padding: 111px 38px 40px 38px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+        background-color: #ffffff;
+        visibility: hidden;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+            background-color: #ffffff;
+            z-index: 2;
+            visibility: hidden;
+        }
+        &._active {
+            opacity: 1;
+            visibility: visible;
+            &::before {
+                opacity: 1;
+                left: 0;
+                visibility: visible;
+            }
+        }
+    }
+    &__content {
+        flex-direction: column;
+        min-height: 100%;
+        flex: 1 1 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $md3+px) {
+            justify-content: flex-start;
+        }
+    }
+    // .menu__list
+    &__list {
+        background-color: transparent;
+        width: 100%;
+        max-width: 1085px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        @include adaptiv-value("column-gap", 110, 0, 1);
+        justify-content: center;
+        @media (max-width: $md3+px) {
+            grid-template-columns: repeat(1, auto);
+            justify-content: start;
+        }
+    }
+
+    // .menu__items
+    &__items {
+        @media (max-width: $md3+px) {
+            margin-bottom: 0;
+        }
+    }
+
+    // .menu__item
+    &__item {
+    }
+
+    // .menu__link
+    &__link {
+        font-family: "ViaodaLibre";
+        @include adaptiv-value("font-size", 68, 32, 1);
+        @include adaptiv-value("line-height", 96, 45, 1);
+        @media (max-width: $md2+px) {
+            @include adaptiv-value("font-size", 40, 32, 1);
+            @include adaptiv-value("line-height", 86, 45, 1);
+        }
+
+        color: #000000;
+        &:hover {
+            color: $redColor;
+            transition: color 0.3s ease 0s;
+        }
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 14px;
+        color: #0a0a0a;
+        text-transform: uppercase;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    //menu__items-contacts
+    &__items-contacts {
+        @include adaptiv-value("margin-top", 65, 25, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        @media (max-width: $md2+px) {
+            margin-top: 25px;
+        }
+    }
+
+    //menu__btn-burger
+    &__btn-burger {
+        @media (min-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__socials-burger {
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+}
+
+.menu__tel-mr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    @media (max-width: $md3+px) {
+        display: none;
+    }
+}
+
+//====================================================================================================
+
+//Burger
+.icon-menu {
+    position: absolute;
+    @include adaptiv-value("top", 30, 22, 1);
+    left: 50px;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 200;
+    @media (max-width: $md2+px) {
+        left: auto;
+        right: 0px;
+    }
+    &::before {
+        content: "МЕНЮ";
+        position: absolute;
+        top: -3px;
+        right: 120%;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #0a0a0a;
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    span {
+        transition: all 0.3s ease 0s;
+        left: 0;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        &:first-child {
+            width: 40px;
+            top: 0px;
+        }
+        &:last-child {
+            top: auto;
+            bottom: 65%;
+        }
+    }
+    &._active {
+        &::before {
+            display: none;
+        }
+        span {
+            &:first-child {
+                width: 30px;
+                transform: rotate(-45deg);
+                top: calc(33% - 1px);
+            }
+            &:last-child {
+                transform: rotate(45deg);
+                bottom: calc(67% - 1px);
+            }
+        }
+    }
+}

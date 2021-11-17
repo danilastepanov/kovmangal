@@ -1,0 +1,117 @@
+.slider-work {
+    @include adaptiv-value("padding-top", 135, 46, 1);
+
+    @media (max-width: 900px) {
+        margin-bottom: 100px;
+    }
+
+    // .slider-work__container
+    &__container {
+    }
+    // .slider-work__body
+    &__body {
+    }
+    &__content {
+        @media (max-width: 899px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include adaptiv-value("margin-left", 110, 25, 1);
+    }
+    // .slider-work__chapter
+    &__chapter {
+    }
+    // .slider-work__title
+    &__title {
+    }
+}
+
+.work-slider {
+    @include adaptiv-value("margin-left", 110, 25, 1);
+    position: relative;
+
+    @media (max-width: 900px) {
+        margin: 0 auto;
+        @include adaptiv-value("width", 454, 270, 1);
+        @include adaptiv-value("height", 614, 370, 1);
+    }
+
+    // .work-slider__body
+    &__body {
+        overflow: visible;
+        @media (max-width: 340px) {
+            overflow: hidden;
+        }
+    }
+
+    // .work-slider__slide
+    &__slide {
+    }
+    // .work-slider__img
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    // .work-slider__arrows
+    &__arrows {
+        position: absolute;
+        left: 68.5%;
+
+        top: calc(50% - 60px);
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 900px) {
+            left: calc(50% - 70px);
+            flex-direction: row;
+            top: unset;
+            bottom: -80px;
+        }
+    }
+}
+
+.slider-arrow {
+    // .slider-arrow__prev
+    &__prev {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #151515;
+        box-sizing: border-box;
+        transform: rotate(-180deg);
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #ef3e16;
+                &::before {
+                    color: #ef3e16;
+                }
+            }
+        }
+
+        @media (max-width: 900px) {
+            order: -1;
+        }
+    }
+    // .slider-arrow__next
+    &__next {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #151515;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #ef3e16;
+                &::before {
+                    color: #ef3e16;
+                }
+            }
+        }
+        @media (max-width: 900px) {
+            margin-bottom: 0px;
+            margin-left: 20px;
+        }
+    }
+}

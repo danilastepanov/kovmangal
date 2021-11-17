@@ -1,0 +1,55 @@
+<footer class="footer">
+	<div class="footer__img">
+		<img src="img/footer.jpg" alt="фон подвала сайта">
+	</div>
+	<div class="footer__img2">
+		<img src="img/footer-big.jpg" alt="фон подвала сайта">
+	</div>
+
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__contacts">
+				<h3 class="footer__chapter chapter">С нами быстро, удобно и легко связаться</h3>
+				<h2 class="footer__title title _icons-title">Контакты</h2>
+
+				<div class="footer__messengers">
+					<div class="footer__phone">
+						<div class="footer__phone-title">Телефон</div>
+						<a class="menu__tel footer__tel _icons-phone" href="tel:++7949999999">+7 945 999 99 99</a>
+					</div>
+					<div class="footer__socials-wrapper">
+						<div class="footer__messenger-title">Мессенджеры</div>
+						<div class="footer__messenger">
+							<a class="footer__telegram _icons-telegram" href="tg://resolve?domain=99999999999"></a>
+							<a class="footer__whatsapp _icons-whatsapp" href="https://wa.me/4957777777"></a>
+							<a class="footer__viber _icons-viber" href="viber://chat?number=%2B4957777777"></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<form action="POST" class="form form-footer">
+				<div class="form__line">
+					<div class="form__title">Укажите ваши контактные данные</div>
+				</div>
+				<div class="form__line">
+					<label for="name-footer" class="form__label">Ваше имя</label>
+					<input id="name-footer" autocomplete="off" type="text" name="form[]" data-error data-value="Например, Валерий" class="form__input input _req" />
+				</div>
+
+				<div class="form__line">
+					<label class="form__label form__label-phone" for="phone-footer">Телефон</label>
+					<input id="phone-footer" autocomplete="off" type="tel" name="form[]" data-value="Телефон" data-error class="form__input input _phone _req" />
+				</div>
+
+				<button type="submit" class="form__btn btn">Отправить</button>
+
+				<label class="form__label checkbox">
+					<input data-error="Ошибка" class="form__checkbox checkbox__input" type="checkbox" value="1" name="form[]" />
+					<span class="checkbox__text"><span>Я ознакомлен с условиями <a href="">политики конфиденциальности</a></span></span>
+				</label>
+			</form>
+		</div>
+	</div>
+</footer>

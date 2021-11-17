@@ -1,0 +1,88 @@
+.faq {
+    @include adaptiv-value("padding-top", 135, 46, 1);
+    // @include adaptiv-value("padding-bottom", 135, 46, 1);
+    // .faq_answer
+    &_answer {
+        background-color: #dac9bc44;
+        line-height: 28px;
+        padding: 1.3rem 2rem 1.1rem 2.2rem;
+        @media (max-width: 768px) {
+            padding: 1rem;
+        }
+        @include adaptiv-value("font-size", 18, 16, 1);
+        @include adaptiv-value(" line-height", 28, 26, 1);
+    }
+    // .faq__container
+    &__container {
+    }
+    // .faq__body
+    &__body {
+    }
+    // .faq__content
+    &__content {
+        @media (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include adaptiv-value("margin-left", 110, 25, 1);
+    }
+    // .faq__chapter
+    &__chapter {
+    }
+    // .faq__title
+    &__title {
+    }
+    // .faq__questions
+    &__questions {
+        :first-child {
+            border-top: 1px solid #151515;
+        }
+        @media (min-width: 900px) {
+            @include adaptiv-value("margin-left", 110, 25, 1);
+        }
+    }
+    // .faq__question
+    &__question {
+        position: relative;
+        font-weight: 600;
+        @include adaptiv-value("font-size", 32, 16, 1);
+        @include adaptiv-value("line-height", 38, 26, 1);
+        text-transform: uppercase;
+        padding: 1.6rem 0 1.6rem 0;
+        @media (max-width: 500px) {
+            padding: 1.3rem 0 1.3rem 0;
+        }
+        color: #151515;
+        border-bottom: 1px solid #151515;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &::after {
+            content: "+";
+            position: absolute;
+            font-size: 2rem;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: calc(50% - 25px);
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $brownColor;
+            transition: background-color 0.3s ease 0s;
+            @media (max-width: 500px) {
+                @include adaptiv-value("width", 50, 40, 1);
+                @include adaptiv-value("height", 50, 40, 1);
+                top: calc(50% - 20px);
+            }
+        }
+    }
+    .faq__question._active::after {
+        content: "-";
+        background-color: $redColor;
+        color: #ffff;
+        transition: background-color 0.3s ease 0s;
+    }
+}

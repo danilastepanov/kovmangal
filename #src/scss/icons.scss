@@ -1,0 +1,58 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icons-"],
+[class*=" _icons-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icons-fire:before {
+	content: "\e900";
+}
+
+._icons-main1:before {
+	content: "\e901";
+}
+
+._icons-main2:before {
+	content: "\e902";
+}
+
+._icons-main3:before {
+	content: "\e903";
+}
+
+._icons-phone:before {
+	content: "\e904";
+}
+
+._icons-slider:before {
+	content: "\e905";
+}
+
+._icons-telegram:before {
+	content: "\e906";
+}
+
+._icons-title:before {
+	content: "\e907";
+}
+
+._icons-viber:before {
+	content: "\e908";
+}
+
+._icons-whatsapp:before {
+	content: "\e909";
+}
