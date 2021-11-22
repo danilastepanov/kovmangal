@@ -95,15 +95,6 @@ if (iconMenu != null) {
             body_lock(delay);
             iconMenu.classList.toggle("_active");
             menuBody.classList.toggle("_active");
-            // if (!header.classList.contains("_active")) {
-            //     header.classList.add("_active");
-            //     header.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
-            // } else {
-            //     setTimeout(function () {
-            //         header.classList.remove("_active");
-            //         header.style.paddingRight = "0px";
-            //     }, delay);
-            // }
         }
     });
 }

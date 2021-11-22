@@ -64,13 +64,13 @@
         @media (max-width: 660px) {
             grid-row: 1;
             grid-column: 1 / 7;
+            justify-self: start;
         }
     }
     // .footer__chapter
     &__chapter {
         margin-bottom: 60px;
         @media (max-width: 982px) {
-            margin-bottom: 70px;
             @include adaptiv-value("width", 520, 210, 1);
         }
     }
@@ -104,7 +104,6 @@
         }
     }
     &__messenger-title {
-        margin-left: 12px;
         font-weight: 600;
         font-size: 16px;
         line-height: 28px;
@@ -120,7 +119,7 @@
         font-size: 28px;
 
         :not(:last-child) {
-            margin-right: 20px;
+            margin-right: 40px;
         }
     }
     &__tel {
@@ -134,11 +133,11 @@
         color: #039be5;
         border-radius: 4px;
         padding-top: 10px;
-        width: 75px;
-        height: 75px;
-        &:hover {
-            background-color: #ffffff4f;
-            transition: all 0.3s ease 0s;
+        width: 56px;
+        height: 64px;
+        &:hover::after {
+            color: #039be5;
+            transition: color 0.3s ease 0s;
         }
         &::after {
             margin-top: 3px;
@@ -159,11 +158,11 @@
         color: #4caf50;
         border-radius: 4px;
         padding-top: 10px;
-        width: 75px;
-        height: 75px;
-        &:hover {
-            background-color: #ffffff4f;
-            transition: all 0.3s ease 0s;
+        width: 56px;
+        height: 64px;
+        &:hover::after {
+            color: #4caf50;
+            transition: color 0.3s ease 0s;
         }
         &::after {
             margin-top: 3px;
@@ -184,11 +183,11 @@
         color: #7f40bd;
         border-radius: 4px;
         padding-top: 10px;
-        width: 75px;
-        height: 75px;
-        &:hover {
-            background-color: #ffffff4f;
-            transition: all 0.3s ease 0s;
+        width: 56px;
+        height: 64px;
+        &:hover::after {
+            color: #7f40bd;
+            transition: color 0.3s ease 0s;
         }
         &::after {
             margin-top: 3px;
@@ -199,6 +198,7 @@
             text-align: center;
             color: #000000;
             opacity: 0.5;
+            transition: color 0.3s ease 0s;
         }
     }
     .form {

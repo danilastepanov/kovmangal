@@ -5,13 +5,28 @@
     width: 100%;
     top: 0;
     left: 0;
-    @include adaptiv-value("padding-top", 13, 20, 1);
-    @include adaptiv-value("padding-bottom", 13, 20, 1);
+    min-height: 40px;
     z-index: 20;
-
     &._scroll {
+        .header__wrapper {
+            background-color: rgba(255, 255, 255, 0.8);
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.9);
+                }
+            }
+        }
+        .header__body {
+            min-height: 87px;
+        }
+        .menu__logo {
+            img {
+                @include adaptiv-value("height", 73, 60, 1);
+            }
+        }
     }
     &__wrapper {
+        transition: background-color 0.3s ease 0s;
         position: fixed;
         width: 100%;
         &._active {
@@ -25,6 +40,10 @@
     }
     // .header__body
     &__body {
+        transition: min-height 0.3s ease 0s;
+        display: flex;
+        align-items: center;
+        min-height: 99px;
     }
     // .header__menu
     &__menu {
@@ -32,6 +51,7 @@
 }
 
 .menu {
+    width: 100%;
     display: flex;
     position: relative;
     align-items: center;

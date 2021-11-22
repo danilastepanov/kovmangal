@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    @include adaptiv-value("padding-top", 140, 70, 1);
+    @include adaptiv-value("padding-top", 140, 120, 1);
     // .main__container
     &__container {
     }

@@ -307,6 +307,8 @@ if (goto_links) {
             let target_block_class = goto_link.getAttribute("href").replace("#", "");
             let target_block = document.querySelector("." + target_block_class);
             _goto(target_block, 300);
+            menu_close();
+            body_lock_remove(500);
             e.preventDefault();
         });
     }
@@ -314,9 +316,10 @@ if (goto_links) {
 function _goto(target_block, speed, offset = 0) {
     let header = "";
     //OffsetHeader
-    //if (window.innerWidth < 992) {
-    //	header = 'header';
-    //}
+    if (window.innerWidth < 1281) {
+        header = "header";
+        offset = 10;
+    }
     let options = {
         speedAsDuration: true,
         speed: speed,
