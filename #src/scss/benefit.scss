@@ -1,5 +1,5 @@
 .benefit {
-    @include adaptiv-value("padding-top", 135, 46, 1);
+    @include adaptiv-value("padding-top", 85, 46, 1);
 
     @media (max-width: $md2+px) {
         padding-top: 0;
