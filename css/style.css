@@ -2600,7 +2600,7 @@ body.ie ._ibg img {
 }
 
 .footer__chapter {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .footer__phone {
@@ -2646,9 +2646,24 @@ body.ie ._ibg img {
 }
 
 .footer__tel {
+  margin-top: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #0a0a0a;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.footer__tel._icons-phone::before {
+  margin-right: 10px;
 }
 
 .footer__telegram {
@@ -3651,7 +3666,6 @@ body.ie ._ibg img {
   }
 
   .about__video img {
-    margin-bottom: 100px;
     height: 100%;
     width: 100%;
     max-width: 436px;
@@ -4179,8 +4193,12 @@ body.ie ._ibg img {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1/7;
-    -ms-grid-column-align: start;
-        justify-self: start;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+
+  .footer__chapter {
+    text-align: center;
   }
 
   .footer .form {
