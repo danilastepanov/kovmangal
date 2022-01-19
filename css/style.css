@@ -2255,6 +2255,7 @@ body.ie ._ibg img {
 .assortment__bg2 {
   display: none;
   width: 110%;
+  pointer-events: none;
   margin-bottom: 60px;
 }
 
@@ -3884,6 +3885,9 @@ body.ie ._ibg img {
     -webkit-transform: scale(1.1) translateX(-30px);
         -ms-transform: scale(1.1) translateX(-30px);
             transform: scale(1.1) translateX(-30px);
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 
   .slider-work {
@@ -4168,10 +4172,14 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 660px) {
+  .footer__img {
+    display: none;
+  }
+
   .footer__img2 {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -7px;
     margin: 0 auto;
     z-index: -1;
     left: 50%;
@@ -4213,12 +4221,6 @@ body.ie ._ibg img {
 
   .footer .form {
     border-bottom: 7px solid #f7f2ee;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer__img {
-    display: none;
   }
 }
 
