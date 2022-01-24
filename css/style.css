@@ -2412,16 +2412,17 @@ body.ie ._ibg img {
 
 .slider-reviews .swiper-slide {
   visibility: visible;
-  opacity: 0.4;
+  opacity: 0;
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
           transform: scale(0.9);
 }
 
 .slider-reviews .swiper-slide-next {
-  -webkit-transform: scale(0.9) translateX(-220px);
-      -ms-transform: scale(0.9) translateX(-220px);
-          transform: scale(0.9) translateX(-220px);
+  opacity: 0.6;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .slider-reviews .swiper-slide-active {

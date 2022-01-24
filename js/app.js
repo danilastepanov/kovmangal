@@ -1383,7 +1383,7 @@ let swiper2 = new Swiper(".slider-reviews__body", {
 
     // slidesOffsetAfter: 140,
     // longSwipesMs: 300,
-    spaceBetween: 500,
+    spaceBetween: 300,
     // autoHeight: true,
     speed: 800,
     watchOverflow: true,
